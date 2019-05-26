@@ -8,11 +8,11 @@ class SectionTop extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 	return Padding(
-		padding: EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0),
+		padding: EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0, bottom: 0.0),
 		child: Row(
 			mainAxisAlignment: MainAxisAlignment.spaceBetween,
 			children: <Widget>[
-				Text("Notepad",
+				Text("Demos",
 					style: TextStyle(
 						color: Colors.white,
 						fontSize: 46.0,
@@ -22,7 +22,7 @@ class SectionTop extends StatelessWidget {
 					)
 				),
 				Icon(
-					Icons.note_add,
+					Icons.code,
 					color: Colors.white70,
 					size: 24,
 				)

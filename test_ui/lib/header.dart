@@ -18,7 +18,7 @@ class Header extends StatelessWidget {
 				IconButton(
 					icon: Icon(
 						Icons.menu,
-						color: Colors.white70,
+						//color: Colors.white70,
 						size: 30.0,
 					),
 					onPressed: (){},
@@ -26,7 +26,7 @@ class Header extends StatelessWidget {
 				IconButton(
 					icon: Icon(
 						Icons.search,
-						color: Colors.white70,
+						//color: Colors.white70,
 						size: 30.0,
 					),
 					onPressed: (){},
