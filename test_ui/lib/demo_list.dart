@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './card_ui_page.dart';
+
 class DemoList extends StatelessWidget{
 	@override
 	Widget build(BuildContext context){
@@ -20,7 +22,7 @@ class FirstDemo extends StatelessWidget {
 		return Container(
 			child: ListTile(
 			leading: Icon(Icons.format_shapes, color: Colors.white70),
-			title: Text("Push Navigation",
+			title: Text("Card UI",
 				style: TextStyle(
 					color: Colors.white,
 					fontSize: 16.0,
@@ -29,7 +31,11 @@ class FirstDemo extends StatelessWidget {
 					letterSpacing: 1.0,
 				)),
 			trailing: Icon(Icons.arrow_forward, color: Colors.white70),
-			onTap: () => debugPrint("Here"),
+			onTap: () => Navigator.push(context, MaterialPageRoute<void>(
+				builder: (BuildContext context) {
+					return CardUIPage();
+				}
+			)),
 			)
 		);
 	}
