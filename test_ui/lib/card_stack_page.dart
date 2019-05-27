@@ -35,18 +35,27 @@ class MainCardUI extends StatelessWidget {
 				shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
 				color: Colors.white,
 				child: Column(children: <Widget>[
-					ClipRRect(
+					 ClipRRect(
 						borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0)),
-						child: Image.asset('assets/waterfall.jpg', fit: BoxFit.cover,)),
-					ListTile(
+						child: Container(
+							margin: EdgeInsets.only(left: 0.0, right: 0.0),
+							height: 200,
+							width: 600,
+							child: Image.asset('assets/waterfall.jpg', fit: BoxFit.fitWidth,),
+						),
+					),
+					Padding(
+						padding: const EdgeInsets.only(top: 18.0),
+						child: ListTile(
 						title: Text('Card test',
 						style: TextStyle(
 							color: Colors.black87,
 							fontSize: 14.0,
 							fontFamily: 'Rubik',
 							fontWeight: FontWeight.w400,
-							letterSpacing: 1.0,
+							// letterSpacing: 1.0,
 						)),
+						),
 					)
 				],)
 			),
@@ -60,7 +69,7 @@ class Badge extends StatelessWidget {
 		return Align(
 			alignment: Alignment.bottomCenter,
 			child: Container(
-				margin: EdgeInsets.only(bottom: 45.0),
+				margin: EdgeInsets.only(bottom: 85.0),
 				width: 60,
 				height: 60,
 				decoration: BoxDecoration(
