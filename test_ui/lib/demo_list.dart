@@ -24,16 +24,16 @@ class FirstDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: ListTile(
-      leading: Icon(Icons.format_shapes, color: Colors.white70),
+      leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
       title: Text("Card UI",
           style: TextStyle(
-            color: Colors.white,
+            // color: Colors.white,
             fontSize: 16.0,
             fontFamily: 'Rubik',
             fontWeight: FontWeight.w300,
             letterSpacing: 1.0,
           )),
-      trailing: Icon(Icons.arrow_forward, color: Colors.white70),
+      trailing: Icon(Icons.arrow_forward),
       onTap: () => Navigator.push(context,
               MaterialPageRoute<void>(builder: (BuildContext context) {
             return CardUIPage();
@@ -47,16 +47,16 @@ class SecondDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: ListTile(
-      leading: Icon(Icons.format_shapes, color: Colors.white70),
+      leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
       title: Text("Card UI with Stack",
           style: TextStyle(
-            color: Colors.white,
+            // color: Colors.white,
             fontSize: 16.0,
             fontFamily: 'Rubik',
             fontWeight: FontWeight.w300,
             letterSpacing: 1.0,
           )),
-      trailing: Icon(Icons.arrow_forward, color: Colors.white70),
+      trailing: Icon(Icons.arrow_forward),
       onTap: () => Navigator.push(context,
               MaterialPageRoute<void>(builder: (BuildContext context) {
             return CardStackPage();
@@ -70,16 +70,16 @@ class ThirdDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: ListTile(
-      leading: Icon(Icons.format_shapes, color: Colors.white70),
+      leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
       title: Text("Header with Tabs",
           style: TextStyle(
-            color: Colors.white,
+            // color: Colors.white,
             fontSize: 16.0,
             fontFamily: 'Rubik',
             fontWeight: FontWeight.w300,
             letterSpacing: 1.0,
           )),
-      trailing: Icon(Icons.arrow_forward, color: Colors.white70),
+      trailing: Icon(Icons.arrow_forward),
       onTap: () => Navigator.push(context,
               MaterialPageRoute<void>(builder: (BuildContext context) {
             return TabsPage();

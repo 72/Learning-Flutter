@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:test_ui/card_ui_page.dart';
 
 import './header.dart';
 import './section_top.dart';
 import './demo_list.dart';
-import './card_ui_page.dart';
 
 void main() => runApp(MaterialApp(
-	theme: ThemeData(fontFamily: 'Rubik', brightness: Brightness.dark),
+	theme: _themeTwo(),
 	home: UIApp(),
 	debugShowCheckedModeBanner: false,
 	// routes: <String, WidgetBuilder>{
@@ -24,12 +22,13 @@ class _UIAppState extends State<UIApp> {
 	@override
 	Widget build(BuildContext context){
 		return Scaffold(
-			backgroundColor: Color(0xFF2d3447),
+			//backgroundColor: Color(0xFF2d3447),
+			//backgroundColor: Theme.of(context).backgroundColor,
 			body: Column(
 					children: <Widget>[
 						Header(),
 						SectionTop(),
-						Divider(color: Colors.white54,),
+						Divider(),
 						DemoList(),
 					],
 				),
@@ -37,3 +36,29 @@ class _UIAppState extends State<UIApp> {
 	}
 }
 
+_themeOne() =>
+	ThemeData(
+		fontFamily: 'Rubik', 
+		brightness: Brightness.dark,
+		//primaryColor: Color.fromRGBO(30, 30, 30, 1),
+		//backgroundColor: Color.fromRGBO(30, 30, 30, 1),
+		//scaffoldBackgroundColor: Color.fromRGBO(30, 30, 30, 1),
+	);
+
+_themeTwo() =>
+	ThemeData(
+		// Brightness and Colors
+		brightness: Brightness.light,
+		primaryColor: Color.fromRGBO(30, 75, 90, 1),
+		accentColor: Colors.pink,
+		//backgroundColor: Color.fromRGBO(130, 130, 130, 1),
+		//scaffoldBackgroundColor: Color.fromRGBO(30, 30, 30, 1),
+		// FontFamily
+		fontFamily: 'Rubik', 
+		// Text Theme
+		textTheme: TextTheme(
+			headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+			title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+			body1: TextStyle(fontSize: 14.0),
+		)
+	);

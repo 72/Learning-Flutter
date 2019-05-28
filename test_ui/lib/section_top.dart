@@ -14,7 +14,7 @@ class SectionTop extends StatelessWidget {
 			children: <Widget>[
 				Text("Demos",
 					style: TextStyle(
-						color: Colors.white,
+						// color: Colors.white,
 						fontSize: 46.0,
 						fontFamily: 'Rubik',
 						fontWeight: FontWeight.w300,
@@ -23,7 +23,7 @@ class SectionTop extends StatelessWidget {
 				),
 				Icon(
 					Icons.code,
-					color: Colors.white70,
+					// color: Colors.white70,
 					size: 24,
 				)
 			],
