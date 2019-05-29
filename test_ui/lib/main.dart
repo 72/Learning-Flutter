@@ -49,7 +49,8 @@ _themeTwo() =>
 	ThemeData(
 		// Brightness and Colors
 		brightness: Brightness.light,
-		primaryColor: Color.fromRGBO(30, 75, 90, 1),
+		//primaryColor: Color.fromRGBO(30, 75, 90, 1),
+		primaryColor: Colors.white,
 		accentColor: Colors.pink,
 		//backgroundColor: Color.fromRGBO(130, 130, 130, 1),
 		//scaffoldBackgroundColor: Color.fromRGBO(30, 30, 30, 1),

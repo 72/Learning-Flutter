@@ -10,83 +10,47 @@ class DemoList extends StatelessWidget {
     return Expanded(
       child: ListView(
         children: <Widget>[
-          FirstDemo(),
-          SecondDemo(),
-          ThirdDemo(),
+          OptionListItem( title: "Card UI", goTo: CardUIPage(), ),
+          OptionListItem( title: "Card UI with Stack", goTo: CardStackPage(), ),
+          OptionListItem( title: "Header with Tabs", goTo: TabsPage(), ),
         ],
       ),
     );
   }
 }
 
-class FirstDemo extends StatelessWidget {
+
+class OptionListItem extends StatelessWidget {
+  OptionListItem({this.title, this.goTo});
+
+  final String title;
+  final Widget goTo;
+  
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: ListTile(
-      leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
-      title: Text("Card UI",
-          style: TextStyle(
-            // color: Colors.white,
-            fontSize: 16.0,
-            fontFamily: 'Rubik',
-            fontWeight: FontWeight.w300,
-            letterSpacing: 1.0,
-          )),
-      trailing: Icon(Icons.arrow_forward),
-      onTap: () => Navigator.push(context,
-              MaterialPageRoute<void>(builder: (BuildContext context) {
-            return CardUIPage();
-          })),
-    ));
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0),
+      child: Container(
+          child: ListTile(
+            leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
+            title: Text(title,
+                style: TextStyle(
+                  // color: Colors.white,
+                  fontSize: 16.0,
+                  fontFamily: 'Rubik',
+                  fontWeight: FontWeight.w300,
+                  letterSpacing: 1.0,
+                )),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () => Navigator.push(context,
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                  return goTo;
+                })),
+      )),
+    );
   }
 }
 
-class SecondDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        child: ListTile(
-      leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
-      title: Text("Card UI with Stack",
-          style: TextStyle(
-            // color: Colors.white,
-            fontSize: 16.0,
-            fontFamily: 'Rubik',
-            fontWeight: FontWeight.w300,
-            letterSpacing: 1.0,
-          )),
-      trailing: Icon(Icons.arrow_forward),
-      onTap: () => Navigator.push(context,
-              MaterialPageRoute<void>(builder: (BuildContext context) {
-            return CardStackPage();
-          })),
-    ));
-  }
-}
-
-class ThirdDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        child: ListTile(
-      leading: Icon(Icons.format_shapes, color: Theme.of(context).accentColor),
-      title: Text("Header with Tabs",
-          style: TextStyle(
-            // color: Colors.white,
-            fontSize: 16.0,
-            fontFamily: 'Rubik',
-            fontWeight: FontWeight.w300,
-            letterSpacing: 1.0,
-          )),
-      trailing: Icon(Icons.arrow_forward),
-      onTap: () => Navigator.push(context,
-              MaterialPageRoute<void>(builder: (BuildContext context) {
-            return TabsPage();
-          })),
-    ));
-  }
-}
 
 // Text("Info",
 // 				style: TextStyle(
