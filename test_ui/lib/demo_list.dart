@@ -23,12 +23,23 @@ class DemoList extends StatelessWidget {
 }
 
 
+// Custom Widget: List Item
 class OptionListItem extends StatelessWidget {
+  // Initialization, constructor
   OptionListItem({this.title, this.goTo});
-
   final String title;
   final Widget goTo;
   
+
+  /*
+  ---
+  Padding
+    ListTile
+      Icon, Text, Icon, onTap()
+  ---
+  The title and goTo props are passed down to Text and onTap respectively.
+  */
+
   @override
   Widget build(BuildContext context) {
     return Padding(
