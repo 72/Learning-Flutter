@@ -5,6 +5,7 @@ import './card_ui_page.dart';
 import './card_stack_page.dart';
 import './tabs_page.dart';
 import './list_page.dart';
+import './appui_page.dart';
 
 
 class DemoList extends StatelessWidget {
@@ -17,6 +18,7 @@ class DemoList extends StatelessWidget {
           OptionListItem( title: "Card UI with Stack", goTo: CardStackPage(), ),
           OptionListItem( title: "Header with Tabs", goTo: TabsPage(), ),
           OptionListItem( title: "List", goTo: ListPage(), ),
+          OptionListItem( title: "Unnamed App UI", goTo: AppUIPage(), ),
         ],
       ),
     );
