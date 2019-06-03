@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import './card_ui_page.dart';
 import './card_stack_page.dart';
@@ -57,13 +58,23 @@ class OptionListItem extends StatelessWidget {
                 )),
             trailing: Icon(Icons.arrow_forward),
             onTap: () => Navigator.push(context,
-                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                    CupertinoPageRoute<void>(builder: (BuildContext context) {
                   return goTo;
                 })),
       )),
     );
   }
 }
+
+/*
+MaterialPageRoute
+vs
+CupertinoPageRoute
+
+These widgets implement the respetive native transition behavior of each OS. 
+"Material" adapts on iOS to show the correct native transition (step to the right), however, on Android the transition is a fade/slide from the bottom, which doesn't seem to be ideal nor consistent with the behavior of a back button. 
+Using "Cupertino" here ensures the transition matches on Android the transtition to the iOS one.
+*/
 
 
 // Text("Info",
