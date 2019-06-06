@@ -9,8 +9,15 @@ class AppUIPage extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.only(left: 16.0, right: 16.0),
-        child: Text("App UI"),
+        child: Center(
+          child: TextFormField(
+            validator: (value){
+              if(value.isEmpty){
+                return "Enter text";
+              }
+            }
+          )
       ),
-    );
+    ),);
   }
 }
