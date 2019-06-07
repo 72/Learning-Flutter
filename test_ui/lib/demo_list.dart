@@ -60,7 +60,7 @@ class OptionListItem extends StatelessWidget {
                 )),
             trailing: Icon(Icons.arrow_forward),
             onTap: () => Navigator.push(context,
-                    CupertinoPageRoute<void>(builder: (BuildContext context) {
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
                   return goTo;
                 })),
       )),
